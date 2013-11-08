@@ -112,11 +112,12 @@ static const NSUInteger kTAG_BTN_SEARCH = 40000;
     [self.view addSubview:btnSearch];
     
     UITapGestureRecognizer *tapGestureRecognize = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissDatePicker:)];
-    tapGestureRecognize.numberOfTapsRequired = 1;
+    [tapGestureRecognize setCancelsTouchesInView:NO];
+    [tapGestureRecognize setNumberOfTapsRequired:1];
     [self.view addGestureRecognizer:tapGestureRecognize];
     
     
-    [self.view setUserInteractionEnabled:YES];
+ //   [self.view setUserInteractionEnabled:YES];
     
 }
 
@@ -448,6 +449,8 @@ static const NSUInteger kTAG_BTN_SEARCH = 40000;
 
 - (void) btnSearch_tapped:(UIButton*)sender
 {
+    [txtStartLocation resignFirstResponder];
+    [txtEndLocation resignFirstResponder];
     [Globals showWarning:[Globals getAppName] sMessage:NSLocalizedString(@"Search is not yet implemented", @"")];
 }
 
