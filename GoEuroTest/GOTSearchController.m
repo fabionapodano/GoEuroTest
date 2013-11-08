@@ -122,12 +122,12 @@ static const NSUInteger kTAG_BTN_SEARCH = 40000;
 
 - (void) startWait
 {
-    [[GOTAppDelegate getAppDelegate] startWait];
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:TRUE];
 }
 
 - (void) stopWait
 {
-    [[GOTAppDelegate getAppDelegate] stopWait];
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:FALSE];
 }
 
 #pragma mark label UITextField Delegate methods
@@ -177,7 +177,8 @@ static const NSUInteger kTAG_BTN_SEARCH = 40000;
         NSURLRequest *reqLocatons = [NSURLRequest requestWithURL:urlLocations cachePolicy:NSURLCacheStorageAllowed timeoutInterval:20];
         
         [connLocations cancel];
-        connLocations = [[NSURLConnection alloc] initWithRequest:reqLocatons delegate:self];
+        connLocations = [[NSURLConnection alloc] initWithRequest:reqLocatons delegate:self startImmediately:YES];
+        [self startWait];
 
     } else
     {
@@ -247,6 +248,9 @@ static const NSUInteger kTAG_BTN_SEARCH = 40000;
     [connection cancel];
     [Globals showWarning:[Globals getAppName] sMessage:NSLocalizedString(@"Connection error, please check your Internet connection", @"")];
     NSLog(@"Error: %@",error);
+    
+    [self stopWait];
+    
 }
 
 - (void) connection:(NSURLConnection *)theConnection didReceiveData:(NSData *)incrementalData
@@ -258,7 +262,8 @@ static const NSUInteger kTAG_BTN_SEARCH = 40000;
 - (void)connectionDidFinishLoading:(NSURLConnection*)theConnection {
     
 	connLocations = nil;
-
+    
+    [self stopWait];
     
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     NSDictionary *dictLocations = [parser objectWithData:dataJSON];
