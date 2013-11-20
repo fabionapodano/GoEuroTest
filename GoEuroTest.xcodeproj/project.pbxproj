@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5516F90183CB56D00ADBCE0 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5516F8E183CB50C00ADBCE0 /* libsbjson-ios.a */; };
 		E5E7F31D182C230C008843AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E7F31C182C230C008843AF /* Foundation.framework */; };
 		E5E7F31F182C230C008843AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E7F31E182C230C008843AF /* CoreGraphics.framework */; };
 		E5E7F321182C230C008843AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E7F320182C230C008843AF /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		E5E7F34E182C230D008843AF /* GoEuroTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7F34D182C230D008843AF /* GoEuroTestTests.m */; };
 		E5E7F35A182C2959008843AF /* UIDevice+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7F359182C2959008843AF /* UIDevice+Utilities.m */; };
 		E5E7F35D182C2D05008843AF /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7F35C182C2D05008843AF /* Globals.m */; };
-		E5E7F398182C488E008843AF /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E7F397182C488E008843AF /* libsbjson-ios.a */; };
 		E5E7F39C182C4F85008843AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E7F39B182C4F85008843AF /* CoreLocation.framework */; };
 		E5E7F39F182C52DF008843AF /* GOTPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7F39E182C52DF008843AF /* GOTPlace.m */; };
 		E5E7F3A1182C5921008843AF /* Monza.gpx in Resources */ = {isa = PBXBuildFile; fileRef = E5E7F3A0182C5921008843AF /* Monza.gpx */; };
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E5516F8E183CB50C00ADBCE0 /* libsbjson-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libsbjson-ios.a"; sourceTree = "<group>"; };
 		E5E7F319182C230C008843AF /* GoEuroTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEuroTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E7F31C182C230C008843AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E5E7F31E182C230C008843AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,7 +67,6 @@
 		E5E7F35C182C2D05008843AF /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Globals.m; path = Utilities/Globals.m; sourceTree = "<group>"; };
 		E5E7F391182C3CCD008843AF /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
 		E5E7F392182C3CCD008843AF /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		E5E7F397182C488E008843AF /* libsbjson-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libsbjson-ios.a"; sourceTree = "<group>"; };
 		E5E7F39B182C4F85008843AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E5E7F39D182C52DF008843AF /* GOTPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOTPlace.h; sourceTree = "<group>"; };
 		E5E7F39E182C52DF008843AF /* GOTPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOTPlace.m; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5516F90183CB56D00ADBCE0 /* libsbjson-ios.a in Frameworks */,
 				E5E7F39C182C4F85008843AF /* CoreLocation.framework in Frameworks */,
-				E5E7F398182C488E008843AF /* libsbjson-ios.a in Frameworks */,
 				E5E7F31F182C230C008843AF /* CoreGraphics.framework in Frameworks */,
 				E5E7F321182C230C008843AF /* UIKit.framework in Frameworks */,
 				E5E7F31D182C230C008843AF /* Foundation.framework in Frameworks */,
@@ -122,8 +122,8 @@
 		E5E7F31B182C230C008843AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5516F8E183CB50C00ADBCE0 /* libsbjson-ios.a */,
 				E5E7F39B182C4F85008843AF /* CoreLocation.framework */,
-				E5E7F397182C488E008843AF /* libsbjson-ios.a */,
 				E5E7F31C182C230C008843AF /* Foundation.framework */,
 				E5E7F31E182C230C008843AF /* CoreGraphics.framework */,
 				E5E7F320182C230C008843AF /* UIKit.framework */,
@@ -424,16 +424,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
 					"$(inherited)",
-					/Users/fabio/Documents/workspace/GoEuroTest,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoEuroTest/GoEuroTest-Prefix.pch";
 				INFOPLIST_FILE = "GoEuroTest/GoEuroTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)",
 					"$(inherited)",
-					/Users/fabio/Documents/workspace/GoEuroTest,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,16 +447,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
 					"$(inherited)",
-					/Users/fabio/Documents/workspace/GoEuroTest,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoEuroTest/GoEuroTest-Prefix.pch";
 				INFOPLIST_FILE = "GoEuroTest/GoEuroTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)",
 					"$(inherited)",
-					/Users/fabio/Documents/workspace/GoEuroTest,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
